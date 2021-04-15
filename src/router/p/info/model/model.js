@@ -1,4 +1,5 @@
 export default {
     path: 'model',
-    compontent: '@/views/p/info/model/model.vue',
+    component: () =>
+        import ('@/views/p/info/model/model.vue'),
 }

@@ -24,7 +24,7 @@
 
     <div class="li-tel">
       <img src="@/assets/img/7877635_1538278040.png" alt="" />
-        <span>{{ footer.phone }} </span>
+      <span>{{ footer.phone }} </span>
     </div>
   </div>
 </template>
@@ -34,7 +34,9 @@ export default {
   data() {
     return {
       route: "",
-      footer: {},
+      footer: {
+        phone: "13688143752",
+      },
     };
   },
 };
@@ -61,6 +63,9 @@ export default {
   justify-content: flex-end;
   align-items: center;
   border-bottom: none;
+}
+.li-tel {
+  display: flex;
 }
 .li-tel img {
   width: 22px;

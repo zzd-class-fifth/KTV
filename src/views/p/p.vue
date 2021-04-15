@@ -22,3 +22,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.el-footer{
+  padding: 0;
+}
+</style>

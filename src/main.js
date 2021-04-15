@@ -13,3 +13,6 @@ new Vue({
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
+
+import qr from 'qrcodejs2';
+Vue.prototype.$qr = qr;
