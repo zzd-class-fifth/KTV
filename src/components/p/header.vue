@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap">
+  <div class="header_wrap">
     <div class="logo_box">
       <img class="logo" src="@/assets/img/20771839_1609920594.png" alt="" />
     </div>
@@ -11,6 +11,7 @@
       text-color="#333"
       :router="true"
       :default-active="route"
+      background-color="#F3F3F3"
     >
       <el-menu-item index="/p/info/main">首页</el-menu-item>
       <el-menu-item index="/p/me/about">关于我们</el-menu-item>
@@ -24,7 +25,7 @@
 
     <div class="li-tel">
       <img src="@/assets/img/7877635_1538278040.png" alt="" />
-      <span>{{ footer.phone }} </span>
+      <span class="phone"> {{ footer.phone }} </span>
     </div>
   </div>
 </template>
@@ -33,7 +34,7 @@
 export default {
   data() {
     return {
-      route: "",
+      route: "/p/info/main",
       footer: {
         phone: "13688143752",
       },
@@ -43,10 +44,12 @@ export default {
 </script>
 
 <style scoped>
-.wrap {
-  height: 100px;
+.header_wrap {
+  width: 1200px;
   display: flex;
   align-items: center;
+  margin: auto;
+  z-index: 10;
 }
 .logo_box {
   display: flex;
@@ -57,15 +60,24 @@ export default {
   height: 31px;
 }
 .nav {
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   border-bottom: none;
 }
+.nav li {
+  line-height: 100px;
+  height: 100px;
+}
 .li-tel {
   display: flex;
+  margin-left: 50px;
+  color: #00b7d9;
+}
+.phone {
+  margin-left: 10px;
 }
 .li-tel img {
   width: 22px;

@@ -27,11 +27,6 @@ i {
 
 
 /* ---------------------- 头部 ---------------------- */
-
-header {
-    background-color: #fff;
-}
-
 .header-box {
     height: 101px;
     line-height: 101px;
@@ -386,4 +381,9 @@ header {
     opacity: .9;
     border-radius: 8px;
     z-index: 50;
+}
+
+.defaultBgColor {
+    background: #F3F3F3;
+
 }

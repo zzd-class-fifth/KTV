@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header height="100px">
+    <el-header class="defaultBgColor" height="100">
       <wHeader></wHeader>
     </el-header>
     <el-main>
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style scoped>
-.el-footer{
+.el-footer {
   padding: 0;
 }
 </style>
