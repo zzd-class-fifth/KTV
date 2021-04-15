@@ -1,0 +1,384 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.w1200 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+i {
+    font-style: unset;
+}
+
+
+/* ---------------------- 头部 ---------------------- */
+
+header {
+    background-color: #fff;
+}
+
+.header-box {
+    height: 101px;
+    line-height: 101px;
+    text-align: center;
+}
+
+.el-container .el-main {
+    padding: 0;
+    overflow: hidden;
+}
+
+.header-box .el-col-19 .el-menu.el-menu--horizontal {
+    border-bottom: none;
+}
+
+.header-box .el-col-19 .nav li {
+    height: 101px;
+    line-height: 101px;
+    margin-right: 10px;
+}
+
+.header-box .el-col-19 .nav li:nth-child(-n+7):hover {
+    color: #409EFF !important;
+    border-bottom: 2px solid #409EFF !important;
+}
+
+
+/* .el-menu.el-menu--horizontal  */
+
+
+/* ---------------------- 头部end ---------------------- */
+
+
+/* ---------------------- 尾部 ---------------------- */
+
+.footer_main {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.footer_main_r {
+    width: 500px;
+}
+
+.ev-text-title-2 {
+    font-size: 36px;
+    color: #fff;
+}
+
+.footer_greeting {
+    margin: 24px 0 38px;
+    line-height: 22px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.footer_msg {
+    font-size: 14px;
+    color: #00B7D9;
+    line-height: 22px;
+    margin-bottom: 24px;
+}
+
+.ev-pic {
+    width: 163px;
+    height: 163px;
+}
+
+.ev-pic img {
+    width: 100%;
+}
+
+.footer_main_l p {
+    font-size: 14px;
+    line-height: 30px;
+    color: #999;
+    text-align: center;
+}
+
+.footer_copy {
+    text-align: center;
+    font-size: 12px;
+    height: 52px;
+    line-height: 52px;
+    color: rgb(152, 152, 152);
+    border-top: 1px solid #3f3f3f;
+}
+
+
+/* ---------------------- 尾部end ---------------------- */
+
+
+/* ---------------------- 侧边导航栏 ---------------------- */
+
+.sidebar {
+    font-size: 12px;
+    position: fixed;
+    width: 100px;
+    height: 342px;
+    padding: 10px;
+    box-sizing: border-box;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    color: #000;
+    background: #f1f1f1;
+    box-shadow: inset 0 0 3px 2px #d8d8d8;
+    border-radius: 10px;
+    transition: all .8s;
+}
+
+.onlineList {
+    padding: 20px 1px 1px;
+}
+
+.online_close {
+    background-image: url("../img/online_service.png");
+    background-repeat: no-repeat;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-position: -68px -16px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.online_open {
+    background-image: url("../img/online_service.png");
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 146px;
+    background-position: 0 -39px;
+    position: absolute;
+    left: -35px;
+    top: 35%;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+}
+
+.online_icon {
+    font-size: 14px;
+    color: #000;
+    letter-spacing: normal;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 5px 0 0;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+}
+
+.online_icon .pic {
+    margin: 0 auto;
+    width: 61px;
+    height: 61px;
+}
+
+.pop-up {
+    padding: 10px;
+    background-color: #f1f1f1;
+    position: absolute;
+    left: -265px;
+    top: 50%;
+    border-radius: 10px;
+    transform: translateY(-50%);
+    box-shadow: inset 0 0 3px 2px #d8d8d8;
+}
+
+.pop-up-form {
+    left: -395px;
+    width: 350px;
+    box-sizing: border-box;
+}
+
+.contact {
+    width: 200px;
+}
+
+.pop-up dl {
+    text-align: left;
+    font-size: 14px;
+}
+
+.pop-up dl dt {
+    line-height: 30px;
+}
+
+.pop-up dl dd {
+    line-height: 24px;
+}
+
+.pop-up .shut {
+    background-image: url("../img/online_service.png");
+    background-repeat: no-repeat;
+    background-position: -68px 0px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.pop-up .arrows {
+    width: 34px;
+    height: 36px;
+    background-image: url("../img/online_service.png");
+    background-position: -10px 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    right: -34px;
+    margin-top: -18px;
+}
+
+.pop-up .leaveWordForm {
+    margin-top: 15px;
+}
+
+.leaveWordForm p {
+    font-size: 12px;
+    text-align: right;
+    line-height: 30px;
+}
+
+.leaveWordForm .el-textarea {
+    margin-bottom: 10px;
+}
+
+.pop-up-form .el-form-item:first-child .el-form-item__content {
+    margin: 0 !important;
+}
+
+.leaveWordForm .el-textarea__inner {
+    width: 325px;
+    height: 80px;
+    resize: none;
+}
+
+.pop-up-form .el-form-item__label {
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.pop-up-form .el-form-item {
+    margin-bottom: 18px;
+}
+
+.pop-up-form .el-form-item:nth-child(n+2) .el-form-item__content .el-input__inner {
+    padding: 0 10px;
+}
+
+.pop-up-form .el-form-item:nth-child(n+2) .el-form-item__content .el-input__inner,
+.pop-up-form .el-form-item:nth-child(n+2) .el-form-item__content .el-input {
+    height: 25px;
+    line-height: 25px;
+    width: 160px;
+}
+
+.pop-up-form .el-form-item:nth-child(n+2) .el-form-item__content {
+    display: flex;
+    height: 25px;
+    line-height: 25px;
+}
+
+
+/* ---------------------- 侧边导航栏 end ---------------------- */
+
+
+/* 回到顶部 */
+
+.backTop_Z {
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #444;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    width: 60px;
+    height: 60px;
+    background: transparent url("../img/back_top_Z.png") no-repeat center;
+    outline: 0;
+    opacity: .9;
+    border-radius: 8px;
+    z-index: 50;
+}
+
+.online_close {
+    background-image: url("../img/online_service.png");
+    background-repeat: no-repeat;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-position: -68px -16px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.online_open {
+    background-image: url("../img/online_service.png");
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 146px;
+    background-position: 0 -39px;
+    position: absolute;
+    left: -35px;
+    top: 35%;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+}
+
+.online_icon {
+    font-size: 14px;
+    color: #000;
+    letter-spacing: normal;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px 0 0;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+/* ---------------------- 侧边导航栏 end ---------------------- */
+
+
+/* 回到顶部 */
+
+.backTop_Z {
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #444;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    width: 60px;
+    height: 60px;
+    background: transparent url("../img/back_top_Z.png") no-repeat center;
+    outline: 0;
+    opacity: .9;
+    border-radius: 8px;
+    z-index: 50;
+}
