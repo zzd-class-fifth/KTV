@@ -34,11 +34,19 @@
 export default {
   data() {
     return {
-      route: "/p/info/main",
+      route: "",
       footer: {
         phone: "13688143752",
       },
     };
+  },
+  created() {
+    this.route = this.$route.path;
+  },
+  watch: {
+    $route(to) {
+      this.route = to.path;
+    },
   },
 };
 </script>

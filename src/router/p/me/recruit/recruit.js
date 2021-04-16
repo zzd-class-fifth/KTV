@@ -1,4 +1,4 @@
 export default {
     path: 'recruit',
-    compontent: '@/views/p/info/recruit/recruit.vue',
+    component: () => import('@/views/p/me/recruit/recruit.vue'),
 }

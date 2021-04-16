@@ -14,7 +14,7 @@
 </template>
 
 
-<style>
+<style scoped>
 p {
   text-align: center;
   line-height: 50px;

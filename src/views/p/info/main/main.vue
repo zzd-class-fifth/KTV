@@ -9,6 +9,7 @@
       <main-1></main-1>
       <main-2></main-2>
       <main-3></main-3>
+      <main-4></main-4>
     </div>
   </div>
 </template>
@@ -17,11 +18,13 @@
 import Main1 from "./main1.vue";
 import Main2 from "./main2.vue";
 import Main3 from "./main3.vue";
+import Main4 from "./main4.vue";
 export default {
   components: {
     Main1,
     Main2,
     Main3,
+    Main4,
   },
 };
 </script>

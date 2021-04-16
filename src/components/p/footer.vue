@@ -1,32 +1,74 @@
 <template>
-  <div class="wrap">
-    <div class="wrap_top">
-      <div class="box_left">
-        <h2>锦缘国际夜总会</h2>
-        <p>
-          成都夜总会，成都夜场，成都酒吧各种模特佳丽【13688143752】，设备齐全，装修高端，资源丰富，生意每天开到爆，欢迎随时预定包厢
-        </p>
-        <p>咨询电话：13688143752</p>
-        <p>公司地址：高端夜场夜总会</p>
-      </div>
-      <div class="box_right">
-        <div class="ewm">
-          <img
-            src="//49.235.93.38:82/uploads/20210407/ccc3edd90f9b0b9d3826c0c73819b819.bmp"
-            alt=""
-          />
+  <div class="footer" ref="footer">
+    <div class="wrap">
+      <transition name="el-zoom-in-center">
+        <div class="wrap_top" v-show="isShow">
+          <div class="box_left">
+            <h2 class="title">锦缘国际夜总会</h2>
+            <p class="msg">
+              成都夜总会，成都夜场，成都酒吧各种模特佳丽【13688143752】，设备齐全，装修高端，资源丰富，生意每天开到爆，欢迎随时预定包厢
+            </p>
+            <div class="des">
+              <p>咨询电话：13688143752</p>
+              <p>公司地址：高端夜场夜总会</p>
+            </div>
+          </div>
+          <div class="box_right">
+            <div class="ewm">
+              <img
+                src="//49.235.93.38:82/uploads/20210407/ccc3edd90f9b0b9d3826c0c73819b819.bmp"
+                alt=""
+              />
+            </div>
+            <p class="ewm-msg">关注加好友更优惠</p>
+          </div>
         </div>
-        <p>关注加好友更优惠</p>
+      </transition>
+      <div class="wrap_footer">
+        <p>
+          Copyright @ 2021. All rights reserved.高端夜场夜总会 版权所有.
+          京ICP备11058096号
+        </p>
       </div>
-    </div>
-    <div class="wrap_footer">
-      <p>
-        Copyright @ 2021. All rights reserved.高端夜场夜总会 版权所有.
-        京ICP备11058096号
-      </p>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isShow: false,
+    };
+  },
+  mounted() {
+    this.addScrollEvent();
+  },
+  methods: {
+    onScroll() {
+      this.isShow = true;
+    },
+    addScrollEvent() {
+      this.addScroll({
+        currentTarget: this.$refs.footer,
+        succeed: this.onScroll,
+      });
+    },
+  },
+  destroyed() {
+    this.removeScroll({
+      currentTarget: this.$refs.footer,
+      succeed: this.onScroll,
+    });
+  },
+  watch: {
+    $route() {
+      this.isShow = false;
+      this.addScrollEvent();
+    },
+  },
+};
+</script>
 
 <style scoped>
 .wrap {
@@ -37,7 +79,7 @@
   color: white;
 }
 .wrap_top {
-  margin-top: 20px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   min-width: 1200px;
@@ -46,8 +88,23 @@
 .box_left {
   width: 500px;
 }
+.title {
+  font-size: 36px;
+  line-height: 1.3;
+  color: rgb(255, 255, 255);
+}
+.box_right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .ewm {
-  width: 163px;
+  width: 162px;
+}
+.ewm-msg {
+  color: #989898;
+  font-size: 14px;
+  line-height: 1.8;
 }
 .wrap_footer {
   display: flex;
@@ -57,5 +114,15 @@
   color: rgb(152, 152, 152);
   height: 52px;
   font-size: 12px;
+}
+.msg {
+  margin: 30px auto;
+  font-size: 14px;
+  color: #989898;
+}
+.des {
+  margin: 30px auto;
+  font-size: 14px;
+  color: #00b7d9;
 }
 </style>

@@ -6,18 +6,22 @@
         <el-breadcrumb-item>模特展示</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
+    <model-box
+      ><p slot="title">模特展示</p>
+      <model-left-nav></model-left-nav>
+    </model-box>
     <model-detail></model-detail>
-    <model-title></model-title>
-    <model-title></model-title>
     <div class="ewm" ref="ewm"></div>
   </div>
 </template>
 
 <script>
+import ModelBox from "./modelBox.vue";
 import modelDetail from "./modelDetail.vue";
+import ModelLeftNav from "./modelLeftNav.vue";
 import ModelTitle from "./modelTitle.vue";
 export default {
-  components: { modelDetail, ModelTitle },
+  components: { modelDetail, ModelTitle, ModelBox, ModelLeftNav },
   data() {
     return {};
   },

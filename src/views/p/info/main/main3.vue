@@ -24,11 +24,15 @@ export default {
 
 
 <style scoped>
+h1 {
+  margin: 20px auto;
+}
 .main3_wrap {
   background: #e1e5e8;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 100px;
 }
 .content {
   display: flex;

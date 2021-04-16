@@ -16,3 +16,6 @@ Vue.use(ElementUI);
 
 import qr from 'qrcodejs2';
 Vue.prototype.$qr = qr;
+
+import common from '@/assets/js/common';
+Vue.use(common);
