@@ -6,7 +6,7 @@
       class="main_bg"
     />
     <div class="main_box">
-      <main1></main1>
+      <main-1></main-1>
       <main-2></main-2>
       <main-3></main-3>
     </div>
@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import main1 from "./main1.vue";
+import Main1 from "./main1.vue";
 import Main2 from "./main2.vue";
 import Main3 from "./main3.vue";
 export default {
   components: {
-    main1,
+    Main1,
     Main2,
     Main3,
   },
@@ -38,7 +38,8 @@ export default {
 .main_box {
   position: relative;
 }
-.main_box >>> .line {
+
+.main_box /deep/ .line {
   font-size: 12px;
   cursor: pointer;
   color: #444;

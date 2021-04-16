@@ -6,14 +6,16 @@
     <div class="box_1">
       <item1 v-for="(item, index) in items" :key="index"></item1>
     </div>
-    <el-button type="primary">查看更多</el-button>
+    <el-button type="primary" class="btn_see_more">查看更多</el-button>
   </div>
 </template>
 
 <script>
-import item1 from "./item1";
+import item1 from "./main1Item1";
 export default {
-  components: { item1 },
+  components: {
+    item1,
+  },
   data() {
     return {
       items: [{}, {}, {}],
@@ -51,5 +53,8 @@ export default {
   justify-content: space-around;
   width: 1200px;
   margin-top: 50px;
+}
+.btn_see_more {
+  margin: 50px auto;
 }
 </style>
