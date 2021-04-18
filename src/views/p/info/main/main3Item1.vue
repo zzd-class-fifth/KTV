@@ -28,6 +28,10 @@ export default {
 </script>
 
 <style scoped>
+p {
+  text-align: center;
+  line-height: 50px;
+}
 .img-warp {
   width: 350px;
 }

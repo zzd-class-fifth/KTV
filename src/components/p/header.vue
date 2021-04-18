@@ -1,31 +1,33 @@
 <template>
-  <div class="header_wrap">
-    <div class="logo_box">
-      <img class="logo" src="@/assets/img/20771839_1609920594.png" alt="" />
-    </div>
+  <div class="header defaultBgColor">
+    <div class="header_wrap">
+      <div class="logo_box">
+        <img class="logo" src="@/assets/img/20771839_1609920594.png" alt="" />
+      </div>
 
-    <el-menu
-      mode="horizontal"
-      class="nav"
-      active-text-color="#409EFF"
-      text-color="#333"
-      :router="true"
-      :default-active="route"
-      background-color="#F3F3F3"
-    >
-      <el-menu-item index="/p/info/main">首页</el-menu-item>
-      <el-menu-item index="/p/me/about">关于我们</el-menu-item>
-      <el-menu-item index="/p/info/model">模特展示</el-menu-item>
-      <el-menu-item index="/p/info/environment">环境展示</el-menu-item>
-      <el-menu-item index="/p/info/news">夜场新闻</el-menu-item>
-      <el-menu-item index="/p/me/contact">联系我们</el-menu-item>
-      <el-menu-item index="/p/me/recruit">招聘要求</el-menu-item>
-      <div class="line"></div>
-    </el-menu>
+      <el-menu
+        mode="horizontal"
+        class="nav"
+        active-text-color="#409EFF"
+        text-color="#333"
+        :router="true"
+        :default-active="route"
+        background-color="#F3F3F3"
+      >
+        <el-menu-item index="/p/info/main">首页</el-menu-item>
+        <el-menu-item index="/p/me/about">关于我们</el-menu-item>
+        <el-menu-item index="/p/info/model">模特展示</el-menu-item>
+        <el-menu-item index="/p/info/environment">环境展示</el-menu-item>
+        <el-menu-item index="/p/info/news">夜场新闻</el-menu-item>
+        <el-menu-item index="/p/me/contact">联系我们</el-menu-item>
+        <el-menu-item index="/p/me/recruit">招聘要求</el-menu-item>
+        <div class="line"></div>
+      </el-menu>
 
-    <div class="li-tel">
-      <img src="@/assets/img/7877635_1538278040.png" alt="" />
-      <span class="phone"> {{ footer.phone }} </span>
+      <div class="li-tel">
+        <img src="@/assets/img/7877635_1538278040.png" alt="" />
+        <span class="phone"> {{ footer.phone }} </span>
+      </div>
     </div>
   </div>
 </template>
@@ -45,6 +47,7 @@ export default {
   },
   watch: {
     $route(to) {
+      // console.log(to);
       this.route = to.path;
     },
   },
@@ -52,6 +55,10 @@ export default {
 </script>
 
 <style scoped>
+.header {
+  position: relative;
+  width: 100%;
+}
 .header_wrap {
   width: 1200px;
   display: flex;

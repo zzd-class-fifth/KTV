@@ -16,6 +16,7 @@ export default {
 
 <style scoped>
 .wrap {
+  display: inline-block;
   border: #1e90ff dotted 1px;
   margin-top: 20px;
   padding: 10px;

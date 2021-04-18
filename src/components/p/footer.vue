@@ -49,16 +49,17 @@ export default {
       this.isShow = true;
     },
     addScrollEvent() {
-      this.addScroll({
-        currentTarget: this.$refs.footer,
-        succeed: this.onScroll,
-      });
+      if (!this.isShow) {
+        this.addScroll({
+          currentTarget: this.$refs.footer,
+          succeed: this.onScroll,
+        });
+      }
     },
   },
   destroyed() {
     this.removeScroll({
       currentTarget: this.$refs.footer,
-      succeed: this.onScroll,
     });
   },
   watch: {

@@ -13,7 +13,7 @@ export default {
             offsetHeight = options.offsetHeight || 30;
             succeed = options.succeed;
 
-            function onScroll() {
+            currentTarget.onScroll = function () {
                 // 获取滚动距离
                 let sT = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
                 // 获取视口的高度
@@ -22,18 +22,20 @@ export default {
                 let oT = currentTarget.offsetTop;
                 if (sT + sH - offsetHeight > oT) {
                     succeed && succeed.call();
-                    eventTarget.removeEventListener('scroll', onScroll);
+                    eventTarget.removeEventListener('scroll', currentTarget.onScroll);
                 }
             }
-            eventTarget.addEventListener('scroll', onScroll);
+            eventTarget.addEventListener('scroll', currentTarget.onScroll);
         }
         Vue.prototype.removeScroll = function (options) {
             let eventTarget;//监听滑动的对象
-            let succeed;//成功回调
+            let currentTarget;//监听操作大目标的对象
+
             eventTarget = options.eventTarget || window;
-            succeed = options.succeed;
-            if (succeed && eventTarget) {
-                eventTarget.removeEventListener('scroll', onScroll);
+            currentTarget = options.currentTarget || console.error('currentTarget is must');
+
+            if (currentTarget) {
+                eventTarget.removeEventListener('scroll', currentTarget.onScroll);
             }
         }
     }

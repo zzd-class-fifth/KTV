@@ -1,14 +1,10 @@
 <template>
   <el-container>
-    <el-header class="defaultBgColor" height="100">
-      <wHeader></wHeader>
-    </el-header>
     <el-main>
+      <wHeader></wHeader>
       <router-view></router-view>
-    </el-main>
-    <el-footer>
       <wFooter></wFooter>
-    </el-footer>
+    </el-main>
   </el-container>
 </template>
 
