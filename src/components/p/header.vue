@@ -16,7 +16,7 @@
       >
         <el-menu-item index="/p/info/main">首页</el-menu-item>
         <el-menu-item index="/p/me/about">关于我们</el-menu-item>
-        <el-menu-item index="/p/info/model">模特展示</el-menu-item>
+        <el-menu-item index="/p/info/model/modelShow">模特展示</el-menu-item>
         <el-menu-item index="/p/info/environment">环境展示</el-menu-item>
         <el-menu-item index="/p/info/news">夜场新闻</el-menu-item>
         <el-menu-item index="/p/me/contact">联系我们</el-menu-item>
