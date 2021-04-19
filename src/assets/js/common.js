@@ -26,6 +26,7 @@ export default {
                 }
             }
             eventTarget.addEventListener('scroll', currentTarget.onScroll);
+            currentTarget.onScroll();
         }
         Vue.prototype.removeScroll = function (options) {
             let eventTarget;//监听滑动的对象

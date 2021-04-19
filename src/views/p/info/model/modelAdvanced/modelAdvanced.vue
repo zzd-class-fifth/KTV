@@ -1,21 +1,14 @@
 <template>
-  <div class="model-show">
+  <div class="model-advanced">
     <div class="wrap">
       <model-box>
-        <p slot="title">模特展示</p>
+        <p slot="title">高级模特</p>
         <div class="box">
           <model-show-item-1
             v-for="(item, index) in dataList"
             :key="index"
             :id="item.id"
           ></model-show-item-1>
-
-          <div
-            class="content-box"
-            v-for="(item, index) in [{}, {}, {}]"
-            :key="index - 20"
-            style="width: 202px"
-          ></div>
         </div>
         <model-show-pagination
           layout="totalPage, first, prev, pager, next, last"
@@ -30,12 +23,11 @@
 
 <script>
 import modelBox from "../modelBox.vue";
-import ModelShowItem1 from "./modelShowItem1.vue";
-import ModelShowPagination from "./modelShowPagination.vue";
+import ModelShowItem1 from "../modelShow/modelShowItem1.vue";
+import ModelShowPagination from "../modelShow/modelShowPagination.vue";
 
 export default {
   components: { modelBox, ModelShowItem1, ModelShowPagination },
-  props: {},
   data() {
     return {
       //显示出来的数据
@@ -47,7 +39,7 @@ export default {
     };
   },
   created() {
-    for (let index = 0; index < 100; index++) {
+    for (let index = 0; index < 20; index++) {
       this.defaultDataList.push({ id: index });
     }
 
@@ -69,7 +61,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .box {
   display: flex;
   flex-wrap: wrap;

@@ -18,7 +18,7 @@ export default {
       default() {
         return {
           imgUrl:
-            "//49.235.93.38:82/uploads/20210408/2ba8c4697ba0a60f2333998080781627.jpg",
+            "//aimg8.dlssyht.cn/u/1913406/product/7193/14385341_1563720196.jpg?x-oss-process=image/resize,m_fixed,w_300,h_400,limit_0",
           title: "成都夜总会模特",
         };
       },

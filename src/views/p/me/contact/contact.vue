@@ -8,7 +8,7 @@
       <p>生意每天开到爆，欢迎随时预定包厢</p>
       <div class="ewm-box">
         <img
-          src="//49.235.93.38:82/uploads/20210407/ccc3edd90f9b0b9d3826c0c73819b819.bmp"
+          src="//aimg8.dlssyht.cn/u/1913406/ueditor/image/957/1913406/1609927671183754.png"
           alt=""
         />
       </div>

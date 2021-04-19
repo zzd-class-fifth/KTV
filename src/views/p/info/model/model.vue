@@ -7,8 +7,10 @@
           <p slot="title">模特展示</p>
           <model-left-nav></model-left-nav>
         </model-box>
-        
-        <router-view></router-view>
+
+        <transition name="model-change">
+          <router-view></router-view>
+        </transition>
       </div>
     </div>
   </div>
@@ -43,5 +45,28 @@ export default {
 }
 .model-detail {
   margin: 50px;
+}
+.router-view-box {
+  position: relative;
+}
+.router-view {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.model-change-enter,
+.model-change-leave-to {
+  transform: translateX(300%);
+}
+.model-change-enter-active {
+  transition-duration: 0.6s;
+}
+.model-change-leave-active {
+  transition-duration: .2s;
+}
+.model-change-enter-to,
+.model-change-leave {
+  transform: translateX(0%);
 }
 </style>

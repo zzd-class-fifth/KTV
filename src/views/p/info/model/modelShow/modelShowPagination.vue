@@ -11,6 +11,9 @@
       :current-page.sync="currentPage"
       :page-size.sync="pageSize"
     >
+      <div v-if="item.slotName == 'totalPage'">
+        <div class="totalPage">共有{{ totalPage }}页</div>
+      </div>
       <div v-if="item.slotName == 'first'">
         <el-button plain :disabled="currentPage == 1" @click="onClickFirst"
           >首页</el-button
@@ -105,7 +108,11 @@ export default {
       return array;
     },
     isDisabledLast() {
-      return this.currentPage == Math.ceil(this.total / this.pageSize);
+      return this.currentPage == this.totalPage;
+    },
+    // 总共页数
+    totalPage() {
+      return Math.ceil(this.total / this.pageSize);
     },
   },
   methods: {
@@ -113,7 +120,7 @@ export default {
       this.currentPage = 1;
     },
     onClickLast() {
-      this.currentPage = Math.ceil(this.total / this.pageSize);
+      this.currentPage = this.totalPage;
     },
   },
   watch: {
@@ -128,6 +135,7 @@ export default {
 <style scoped>
 .model-show-pagination {
   display: flex;
+  justify-content: flex-end;
 }
 </style>
 
@@ -144,8 +152,16 @@ export default {
       }
     }
   }
+  .totalPage {
+    padding: 0 6px;
+    color: #606266;
+    font-size: 13px;
+    line-height: 28px;
+    font-weight: 400;
+  }
   &.is-background {
-    button {
+    button,
+    .totalPage {
       background-color: #f4f4f5;
       padding: 0 6px;
     }

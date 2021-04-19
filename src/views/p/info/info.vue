@@ -5,7 +5,7 @@
       <!-- 背景图 -->
       <div>
         <img
-          src="//49.235.93.38:82/uploads/20210407/41e0a5560cf6b326f1ccfebb5efc9079.jpg"
+          src="//aimg8.dlssyht.cn/u/1913406/ev_user_module_content_tmp/2021_01_06/tmp1609918593_1913406_s.jpg"
           alt=""
         />
       </div>
@@ -17,7 +17,7 @@
           <div class="banner_footer_box">
             <div class="ewm">
               <img
-                src="//49.235.93.38:82/uploads/20210407/ccc3edd90f9b0b9d3826c0c73819b819.bmp"
+                src="//aimg8.dlssyht.cn/u/1913406/module/simplepicbackground/1913406/10387/20772430_1609926138.png?x-oss-process=image/resize,m_fixed,w_134,h_134,limit_0"
                 alt=""
               />
             </div>

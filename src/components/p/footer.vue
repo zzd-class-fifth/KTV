@@ -16,7 +16,7 @@
           <div class="box_right">
             <div class="ewm">
               <img
-                src="//49.235.93.38:82/uploads/20210407/ccc3edd90f9b0b9d3826c0c73819b819.bmp"
+                src="//aimg8.dlssyht.cn/u/1913406/module/simplepicbackground/1913406/10387/20772430_1609926138.png?x-oss-process=image/resize,m_fixed,w_134,h_134,limit_0"
                 alt=""
               />
             </div>

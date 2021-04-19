@@ -3,8 +3,10 @@
     <span class="title">ENVIRONMENTAL DISPLAY</span>
     <p class="msg1">环境/AMBIENT</p>
     <span class="line"></span>
-    <div class="box_1">
-      <item1 v-for="(item, index) in items" :key="index"></item1>
+    <div class="wow bounceInUp">
+      <div class="box_1">
+        <item1 v-for="(item, index) in items" :key="index"></item1>
+      </div>
     </div>
     <el-button type="primary" class="btn_see_more">查看更多</el-button>
   </div>
@@ -20,6 +22,9 @@ export default {
     return {
       items: [{}, {}, {}],
     };
+  },
+  mounted() {
+    this.$wow();
   },
 };
 </script>
